@@ -1,3 +1,6 @@
+
+# Playing with Bin Search Tree. Example of code I can work with.
+
 class node:
 	def __init__(self,value=None):
 		self.value=value
@@ -72,14 +75,11 @@ class binary_search_tree:
 
 	def delete_node(self,node):
 
-		## -----
-		# Improvements since prior lesson
 
 		# Protect against deleting a node not found in the tree
 		if node==None or self.find(node.value)==None:
 			print "Node to be deleted not found in the tree!"
 			return None 
-		## -----
 
 		# returns the node with min value in tree rooted at input node
 		def min_value_node(n):
@@ -107,7 +107,6 @@ class binary_search_tree:
 		# CASE 1 (node has no children)
 		if node_children==0:
 
-			# Added this if statement post-video, previously if you 
 			# deleted the root node it would delete entire tree.
 			if node_parent!=None:
 				# remove reference to the node from the parent
@@ -127,7 +126,6 @@ class binary_search_tree:
 			else:
 				child=node.right_child
 
-			# Added this if statement post-video, previously if you 
 			# deleted the root node it would delete entire tree.
 			if node_parent!=None:
 				# replace the node to be deleted with its child
